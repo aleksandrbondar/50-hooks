@@ -3,7 +3,7 @@ import { useState, useLayoutEffect, useRef } from 'react';
 const ExampleComponent = () => {
   const [size, setSize] = useState(0);
   const [show, setShow] = useState(false);
-  const textRef = useRef(null);
+  const textRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
     if (textRef.current) {
@@ -23,7 +23,7 @@ const ExampleComponent = () => {
   return (
     <div>
       <p>Нарешті я знаю як анімувати непередбачувані по висоті елементи</p>
-      <button style={{padding: '10px'}} onClick={showText}>Show text</button>
+      <button style={{ padding: '10px' }} onClick={showText}>Show text</button>
       <div ref={textRef} style={{
         backgroundColor: 'lightcoral',
         transition: 'height 1s ease',

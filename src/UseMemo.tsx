@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 
 const UseMemo = () => {
   const [count, setCount] = useState(0);
@@ -14,7 +14,7 @@ const UseMemo = () => {
       <p>Зберігання обчислення функції, яка реагує на зміну значення інпуту, а не при кожній зміні стейту</p>
       <p>Count: {count}</p>
       <button onClick={() => setCount(count + 1)}>Increment Count</button>
-      <br/>
+      <br />
       <input
         type="text"
         value={inputValue}
