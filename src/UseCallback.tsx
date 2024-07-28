@@ -6,10 +6,13 @@ const UseCallback = () => {
   const memoizedUseCallbackFunc = React.useCallback(() => {
     console.log('memoizedCallback re-rendered');
   }, []);
+  memoizedUseCallbackFunc();
 
-  const noUseCallbackFunc = (() => {
-     console.log('noCallback function re-rendered when count is increased');
-  })();
+  const noUseCallbackFunc = () => {
+    console.log('noCallback function re-rendered when count is increased');
+    return 'No useCallback function';
+  };
+  noUseCallbackFunc();
 
   return (
     <div>
