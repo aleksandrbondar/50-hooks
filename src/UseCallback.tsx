@@ -22,7 +22,7 @@ const UseCallback = () => {
 
   return (
     <div style={{ padding: '20px', margin: '20px', backgroundColor: 'rgba(0,0,0,0.3)' }}>
-      <h1 style={{ textAlign: 'center' }}>Use layout effect</h1>
+      <h1 style={{ textAlign: 'center' }}>UseCallback</h1>
       <p>Зберігання функції від пере-рендерингу. На прикладі дві функції, одна з них збережена від пере-рендерингу, інша, рендериться кожен раз коли відбувається зміна стейту</p>
       <p>Count: {count}</p>
       <button onClick={increment}>increment</ button>
